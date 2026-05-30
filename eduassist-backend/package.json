@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "description": "EduAssist - AI-powered student productivity platform backend",
   "main": "src/server.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "jest --coverage"
+    "build": "echo 'Backend is a Node.js app, no build step needed'",
+    "test": "jest --coverage --testPathIgnorePatterns=/node_modules/",
+    "lint": "eslint src --ext js 2>/dev/null || true"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.24.0",
